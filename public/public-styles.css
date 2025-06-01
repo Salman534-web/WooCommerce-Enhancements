@@ -1,0 +1,145 @@
+/*
+ * Public-facing styles for My WooCommerce Enhancements plugin.
+ * These styles utilize CSS variables defined dynamically from the admin panel settings.
+ * If custom styles are disabled, these rules will not be loaded.
+ *
+ * This version applies the exact requested styles to COD badges and notices.
+ */
+
+/* Custom Discount Amount on Single Product Page */
+.single-product .discount-amount {
+    color: var(--my-wc-enh-discount-amount-color); /* Uses dynamic color from admin */
+    font-weight: 600;
+    margin-left: 8px;
+    font-size: 0.95em;
+    opacity: 0.9;
+}
+
+/* --- COD Badges (Single Product Page - .cod-badge-available / .cod-badge-unavailable) --- */
+/* Applying your exact requested style for both available and unavailable states */
+.cod-badge-available,
+.cod-badge-unavailable {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 20px; /* Exact requested padding */
+    border-radius: 8px; /* Exact requested border-radius */
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added for consistency with checkout notice */
+    font-size: 14px; /* Exact requested font-size */
+    line-height: 1.5; /* Exact requested line-height */
+    /* No box-shadow or transition for this classic look */
+}
+
+.cod-badge-available {
+    background-color: var(--my-wc-enh-cod-badge-available-bg); /* Uses dynamic color from admin */
+    color: var(--my-wc-enh-cod-badge-available-color); /* Uses dynamic color from admin */
+    border-left: 6px solid var(--my-wc-enh-cod-badge-available-border); /* Uses dynamic color from admin */
+}
+
+.cod-badge-unavailable {
+    background-color: var(--my-wc-enh-cod-badge-unavailable-bg); /* Uses dynamic color from admin */
+    color: var(--my-wc-enh-cod-badge-unavailable-color); /* Uses dynamic color from admin */
+    border-left: 6px solid var(--my-wc-enh-cod-badge-unavailable-border); /* Uses dynamic color from admin */
+}
+
+/* --- COD Notices (Checkout Page - .cod-notice-available / .cod-notice-unavailable) --- */
+/* Applying your exact requested style for both available and unavailable states */
+.cod-notice-available,
+.cod-notice-unavailable {
+    padding: 15px 20px; /* Exact requested padding */
+    border-radius: 8px; /* Exact requested border-radius */
+    margin-bottom: 20px; /* Exact requested margin-bottom */
+    font-size: 14px; /* Exact requested font-size */
+    line-height: 1.5; /* Exact requested line-height */
+    /* No box-shadow or transition for this classic look */
+}
+
+.cod-notice-available {
+    background-color: var(--my-wc-enh-cod-badge-available-bg); /* Uses dynamic color from admin */
+    color: var(--my-wc-enh-cod-badge-available-color); /* Uses dynamic color from admin */
+    border-left: 6px solid var(--my-wc-enh-cod-badge-available-border); /* Uses dynamic color from admin */
+}
+
+.cod-notice-unavailable {
+    background-color: var(--my-wc-enh-cod-badge-unavailable-bg); /* Uses dynamic color from admin */
+    color: var(--my-wc-enh-cod-badge-unavailable-color); /* Uses dynamic color from admin */
+    border-left: 6px solid var(--my-wc-enh-cod-badge-unavailable-border); /* Uses dynamic color from admin */
+}
+
+
+/* --- Checkout Urgency Box (#urgency-box.urgency-box-style) --- */
+#urgency-box.urgency-box-style {
+    background-color: var(--my-wc-enh-urgency-box-bg);
+    color: var(--my-wc-enh-urgency-box-color);
+    border: 1px solid var(--my-wc-enh-urgency-box-border);
+    padding: 18px 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06); /* Keeping shadow for urgency box */
+    transition: all 0.3s ease-in-out;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Style for expired urgency box (fixed colors) */
+#urgency-box.urgency-box-expired-style {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+    border-color: #f5c6cb !important;
+    border-left: 6px solid #f5c6cb;
+}
+
+/* --- Discount Breakdown (Cart/Checkout) --- */
+.woocommerce-cart-form__contents table.shop_table tfoot .regular-price-total-label,
+.woocommerce-checkout-review-order-table tfoot .regular-price-total-label {
+    color: var(--my-wc-enh-regular-price-color);
+    font-weight: 500;
+}
+.woocommerce-cart-form__contents table.shop_table tfoot .regular-price-total-value,
+.woocommerce-checkout-review-order-table tfoot .regular-price-total-value {
+    color: var(--my-wc-enh-regular-price-color);
+    font-weight: 500;
+}
+
+.woocommerce-cart-form__contents table.shop_table tfoot .product-discount-label,
+.woocommerce-checkout-review-order-table tfoot .product-discount-label {
+    color: var(--my-wc-enh-product-discount-color);
+    font-weight: 500;
+}
+.woocommerce-cart-form__contents table.shop_table tfoot .product-discount-value,
+.woocommerce-checkout-review-order-table tfoot .product-discount-value {
+    color: var(--my-wc-enh-product-discount-color);
+    font-weight: 500;
+}
+
+.woocommerce-cart-form__contents table.shop_table tfoot .coupon-discount-label,
+.woocommerce-checkout-review-order-table tfoot .coupon-discount-label {
+    color: var(--my-wc-enh-coupon-discount-color);
+    font-weight: 500;
+}
+.woocommerce-cart-form__contents table.shop_table tfoot .coupon-discount-value,
+.woocommerce-checkout-review-order-table tfoot .coupon-discount-value {
+    color: var(--my-wc-enh-coupon-discount-color);
+    font-weight: 500;
+}
+
+.woocommerce-cart-form__contents table.shop_table tfoot .you-saved-label,
+.woocommerce-checkout-review-order-table tfoot .you-saved-label {
+    color: var(--my-wc-enh-you-saved-color);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+.woocommerce-cart-form__contents table.shop_table tfoot .you-saved-value,
+.woocommerce-checkout-review-order-table tfoot .you-saved-value {
+    color: var(--my-wc-enh-you-saved-color);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* Ensure Inter font is loaded if not already by theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+}

@@ -1,0 +1,93 @@
+/* Styling for the main preview container */
+#css-preview-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Common styles for COD badge preview elements */
+.cod-badge-preview-common {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    border: 1px solid; /* This border will be dynamically colored by JS */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Default styles for available COD badge preview (overridden by JS) */
+#cod-badge-preview-available {
+    background-color: #e6ffec;
+    color: #1a7f37;
+    border-color: #cce5cc;
+}
+
+/* Default styles for unavailable COD badge preview (overridden by JS) */
+#cod-badge-preview-unavailable {
+    background-color: #ffecec;
+    color: #b30000;
+    border-color: #f5c2c2;
+}
+
+/* Default styles for urgency box preview (overridden by JS) */
+#urgency-box-preview {
+    background-color: #fff3cd;
+    color: #856404;
+    border-color: #ffeeba;
+    border: 1px solid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Styling for the discount breakdown preview table */
+.wc-enh-preview-table {
+    width: 100%;
+    max-width: 400px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures rounded corners apply to content */
+}
+
+.wc-enh-preview-table th,
+.wc-enh-preview-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.wc-enh-preview-table th {
+    background-color: #f8f8f8;
+    font-weight: 600;
+}
+
+.wc-enh-preview-table tr:last-child th,
+.wc-enh-preview-table tr:last-child td {
+    border-bottom: none; /* No border on the last row */
+}
+
+/* Default colors for price breakdown preview (overridden by JS) */
+#preview-regular-price-label, #preview-regular-price-value { color: #6c757d; }
+#preview-product-discount-label, #preview-product-discount-value { color: #dc3545; }
+#preview-coupon-discount-label, #preview-coupon-discount-value { color: #007bff; }
+#preview-you-saved-label, #preview-you-saved-value { color: #28a745; }
+
+/* Default color for single product discount amount preview (overridden by JS) */
+#preview-discount-amount-single { color: #dc3545; }
+
+/* General styling for the preview section headers */
+#css-preview-container h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.1em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
